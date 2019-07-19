@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TravelBiz</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_travel">New Travel Deal</string>
+    <string name="action_logout">logout</string>
+    <string name="title_activity_insert">InsertActivity</string>
+    <string name="price">1500FCFA</string>
+    <string name="title">visite yaounde</string>
+    <string name="description">description</string>
+    <string name="save_menu">save</string>
+    <string name="edit_menu">edit</string>
+    <string name="delete_menu">delete</string>
+    <string name="content_description_image">image travel</string>
+    <string name="title_activity_deal">DealActivity</string>
+</resources>
