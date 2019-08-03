@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/edit_menu"
-        android:icon="@android:drawable/edit_text"
+        android:icon="@drawable/ic_cloud_upload_black_24dp"
         android:title="@string/edit_menu"
         app:showAsAction="always" />
     <item
         android:id="@+id/delete_menu"
-        android:icon="@android:drawable/ic_menu_delete"
+        android:icon="@drawable/ic_delete_forever_black_24dp"
         android:title="@string/delete_menu"
         app:showAsAction="always" />
 

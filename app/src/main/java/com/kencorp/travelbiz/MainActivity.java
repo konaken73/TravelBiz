@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<TravelDeals> mDeals;
 
 
-
     RecyclerView recyclerView;
 
     @Override
@@ -50,14 +49,29 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
         recyclerView.setAdapter(new TravelAdapter(this));
+
+*/
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                startActivity(new Intent(view.getContext(),InsertActivity.class));
+
             }
-        });*/
+        });
+
+                if(FirebaseUtil.isAdmin)
+        {
+
+            fab.show();
+        }
+        else{
+
+            fab.hide();
+        }
+
+
     }
 
     @Override
@@ -65,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        MenuItem insertMenu = menu.findItem(R.id.new_travel);
+   /*      MenuItem insertMenu = menu.findItem(R.id.new_travel);
 
         if(FirebaseUtil.isAdmin)
         {
@@ -74,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             insertMenu.setVisible(false);
         }
-
+*/
         return true;
     }
 
@@ -86,10 +100,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.new_travel) {
+       /* if (id == R.id.new_travel) {
             startActivity(new Intent(this,InsertActivity.class));
             return true;
-        }else  if (id == R.id.action_logout) {
+        }else */ if (id == R.id.action_logout) {
 
             FirebaseUtil.signOut();
             return true;
@@ -121,10 +135,21 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(view.getContext(),InsertActivity.class));
+
             }
         });
+
+        if(FirebaseUtil.isAdmin)
+        {
+
+            fab.show();
+        }
+        else{
+
+            fab.hide();
+        }
+
         FirebaseUtil.attachListener();
     }
 
