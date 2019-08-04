@@ -96,7 +96,7 @@ public class InsertActivity extends AppCompatActivity {
 
 
         showImage(travelDeals.getImageUrl());
-
+/*
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +119,7 @@ public class InsertActivity extends AppCompatActivity {
            // fab.setVisibility(1);
            fab.hide();
         }
-
+*/
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
@@ -175,7 +175,7 @@ public class InsertActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater inflater = getMenuInflater();
-       // inflater.inflate(R.menu.save_menu,menu);
+        inflater.inflate(R.menu.newdeal,menu);
 
   /*      if(FirebaseUtil.isAdmin)
         {
@@ -196,27 +196,27 @@ public class InsertActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        /*
+
         int id = item.getItemId();
 
-        if(id == R.id.edit_menu)
+        if(id == R.id.save_menu)
         {
-          //  editDeal();
+           saveDeal();
 
-            Toast.makeText(this,"Deal edit",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Deal saved",Toast.LENGTH_LONG).show();
 
             clean();
-            backToList();
+
             return true;
-        }else if(id == R.id.delete_menu)
+        }/*else if(id == R.id.delete_menu)
         {
 
        //     deleteDeal();
             Toast.makeText(this,"Deal remove",Toast.LENGTH_LONG).show();
 
             backToList();
-        }*/
-
+        }
+*/
         return super.onOptionsItemSelected(item);
     }
 

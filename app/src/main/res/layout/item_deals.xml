@@ -42,6 +42,7 @@
                 android:textAllCaps="true"
                 android:textColor="#3F51B5"
                 android:textSize="16sp"
+                android:ellipsize="end"
                 android:maxLines="50"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(new TravelAdapter(this));
 
-*/
+*//*
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-                if(FirebaseUtil.isAdmin)
+         if(FirebaseUtil.isAdmin)
         {
 
             fab.show();
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
             fab.hide();
         }
-
+*/
 
     }
 
@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
         recyclerView.setAdapter(new TravelAdapter(this));
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

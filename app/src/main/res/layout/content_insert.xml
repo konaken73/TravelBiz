@@ -67,7 +67,7 @@
         android:maxLines="50"
         android:ems="10"
         android:hint="@string/description"
-        android:inputType="textPersonName"
+        android:inputType="text|textMultiLine"
         android:text="@string/description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
